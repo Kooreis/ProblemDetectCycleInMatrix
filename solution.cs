@@ -1,9 +1,16 @@
-using System;
-using System.Collections.Generic;
-
-public class Program
+public static void Main()
 {
-    static int[] dx = { -1, 0, 1, 0 };
-    static int[] dy = { 0, 1, 0, -1 };
-    static int ROW, COL;
+    int[,] matrix = {
+        { 1, 2, 3, 4 },
+        { 5, 1, 2, 3 },
+        { 6, 5, 1, 2 },
+        { 7, 6, 5, 1 }
+    };
+
+    ROW = matrix.GetLength(0);
+    COL = matrix.GetLength(1);
+
+    bool hasCycle = HasCycle(matrix);
+
+    Console.WriteLine(hasCycle ? "Matrix has a cycle" : "Matrix doesn't have a cycle");
 }

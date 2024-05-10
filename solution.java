@@ -1,8 +1,12 @@
-import java.util.Scanner;
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt();
+        m = scanner.nextInt();
+        matrix = new int[n][m];
+        visited = new boolean[n][m];
 
-public class Main {
-    static int[] dx = {-1, 0, 1, 0};
-    static int[] dy = {0, 1, 0, -1};
-    static int n, m;
-    static int[][] matrix;
-    static boolean[][] visited;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
